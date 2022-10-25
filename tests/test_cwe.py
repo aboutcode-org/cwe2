@@ -12,16 +12,12 @@ class TestDatabase(TestCase):
     def test_get_cwe_by_category(self):
         cwe = self.db.get(441, CWECategory.HARDWARE_DESIGN)
         self.assertEqual(cwe.cwe_id, "441")
-        self.assertEqual(
-            cwe.name, "Unintended Proxy or Intermediary ('Confused Deputy')"
-        )
+        self.assertEqual(cwe.name, "Unintended Proxy or Intermediary ('Confused Deputy')")
 
     def test_cwe_get(self):
         cwe = self.db.get(15)
         self.assertEqual(cwe.cwe_id, "15")
-        self.assertEqual(
-            cwe.name, "External Control of System or Configuration Setting"
-        )
+        self.assertEqual(cwe.name, "External Control of System or Configuration Setting")
         self.assertEqual(cwe.weakness_abstraction, "Base")
         self.assertEqual(cwe.status, "Incomplete")
         self.assertEqual(
@@ -42,9 +38,7 @@ class TestDatabase(TestCase):
             "ID:1000:ORDINAL:Primary::NATURE:ChildOf:CWE ID:610:VIEW "
             "ID:1000::NATURE:ChildOf:CWE ID:20:VIEW ID:700:ORDINAL:Primary::",
         )
-        self.assertEqual(
-            cwe.related_attack_patterns, "::13::146::176::203::270::271::69::76::77::"
-        )
+        self.assertEqual(cwe.related_attack_patterns, "::13::146::176::203::270::271::69::76::77::")
 
         self.assertEqual(
             cwe.potential_mitigations,
