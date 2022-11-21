@@ -1,8 +1,30 @@
-================================================
-Common weakness enumeration library for Python
-================================================
+=====================================================================
+cwe2: CWE / Common weakness enumeration library for Python
+=====================================================================
 
-https://cwe.mitre.org/index.html
+cwe2 is a library to handle CWE in Python. CWE are weakness categories for
+vulnerabilities.
+
+Homepage and support: https://github.com/nexB/cwe2
+
+See https://cwe.mitre.org/index.html for details on CWE.
+This is a maintainer fork of https://github.com/Julian-Nash/cwe
+
+It contains a vendored copy of the CWE data.
+
+Copyright (c) Julian-Nash, Ziad Hany, nexB. Inc. and others. 
+SPDX-License-Identifier: MIT and LicenseRef-scancode-cwe-tou
+
+The CWE data has this notice:
+
+    Use of the Common Weakness Enumeration (CWE) and the associated references from
+    this website are subject to the Terms of Use. CWE is sponsored by the U.S.
+    Department of Homeland Security (DHS) Cybersecurity and Infrastructure Security
+    Agency (CISA) and managed by the Homeland Security Systems Engineering and
+    Development Institute (HSSEDI) which is operated by The MITRE Corporation (MITRE).
+    Copyright © 2006–2022, The MITRE Corporation. CWE, CWSS, CWRAF, and the CWE logo
+    are trademarks of The MITRE Corporation.
+    See cwe-tou.LICENSE for details
 
 Installation
 -----------------

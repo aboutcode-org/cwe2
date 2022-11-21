@@ -1,0 +1,4 @@
+about_resource: 1194.csv
+download_url: https://cwe.mitre.org/data/csv/1194.csv.zip
+license_expression: cwe-tou
+notice_file:cwe.NOTICE

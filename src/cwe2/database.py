@@ -1,9 +1,19 @@
+#
+# Copyright (c) Julian-Nash, Ziad Hany, nexB. Inc. and others. All rights reserved.
+# SPDX-License-Identifier: MIT
+# See https://github.com/nexB/cwe2/blob/main/mit.LICENSE for the license text.
+# See https://github.com/nexB/cwe2 for support or download.
+# See https://aboutcode.org for more information about nexB OSS projects.
+#
+
 import csv
 import os
-from typing import List, Union
+from typing import List
+from typing import Union
 
 from cwe2.categories import CWECategory
-from cwe2.mappings import cwe_src_mapping, external_mapping
+from cwe2.mappings import cwe_src_mapping
+from cwe2.mappings import external_mapping
 from cwe2.weakness import Weakness
 
 

@@ -1,0 +1,4 @@
+about_resource: 699.csv
+download_url: https://cwe.mitre.org/data/csv/699.csv.zip
+license_expression: cwe-tou
+notice_file:cwe.NOTICE

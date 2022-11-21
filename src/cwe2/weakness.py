@@ -1,5 +1,15 @@
+#
+# Copyright (c) Julian-Nash, Ziad Hany, nexB. Inc. and others. All rights reserved.
+# SPDX-License-Identifier: MIT
+# See https://github.com/nexB/cwe2/blob/main/mit.LICENSE for the license text.
+# See https://github.com/nexB/cwe2 for support or download.
+# See https://aboutcode.org for more information about nexB OSS projects.
+#
+
 from dataclasses import dataclass
-from typing import Any, Optional, Union
+from typing import Any
+from typing import Optional
+from typing import Union
 
 
 @dataclass
