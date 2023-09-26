@@ -39,6 +39,14 @@ def get_by_category(path):
         return weakness_list
 
 
+class InvalidCWEError(Exception):
+    def __init__(self, cwe_id):
+        self.message = f"Invalid CWE ID {cwe_id}"
+
+    def __str__(self):
+        return self.message
+
+
 class Database:
     database_paths = (
         [navigate_cwe.get(key).get("csv_file") for key in navigate_cwe.keys()]
@@ -64,7 +72,7 @@ class Database:
             cwe_obj = self.get_by_tag(cwe_id)
 
         if not cwe_obj:
-            raise Exception(f"Invalid CWE ID {cwe_id}")
+            raise InvalidCWEError(cwe_id)
 
         return Weakness(*cwe_obj)
 
