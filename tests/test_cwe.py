@@ -8,6 +8,7 @@
 from unittest import TestCase
 
 from cwe2.database import Database
+from cwe2.database import InvalidCWEError
 
 
 class TestDatabase(TestCase):
@@ -88,8 +89,9 @@ class TestDatabase(TestCase):
         assert cwe4.status == "Incomplete"
 
     def test_cwe_error(self):
-        with self.assertRaises(Exception):
+        with self.assertRaises(InvalidCWEError) as e:
             self.db.get(1000000)
+        self.assertEqual(str(e.exception), "Invalid CWE ID 1000000")
 
     def test_is_top_25_cwe(self):
         assert self.db.is_cwe_top_25(20)
