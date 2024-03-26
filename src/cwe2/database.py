@@ -93,8 +93,8 @@ class Database:
                     ]
 
     def get_top_25_cwe(self) -> List[Weakness]:
-        """Returns a list of all CWE Top 25 (2022) Weakness objects"""
-        return get_by_category(external_mapping["cwe_top_25_2022"]["csv_file"])
+        """Returns a list of all CWE Top 25 (2023) Weakness objects"""
+        return get_by_category(external_mapping["cwe_top_25_2023"]["csv_file"])
 
     def get_owasp_top_ten_2021(self) -> List[Weakness]:
         """Returns a list of a Top OWASP Ten (2021) Weakness objects"""
@@ -106,7 +106,7 @@ class Database:
 
     def is_cwe_top_25(self, cwe_id: Union[int, str]) -> bool:
         """Returns True if Weakness object in a Top 25 CWE else False"""
-        return is_in_category(external_mapping["cwe_top_25_2022"]["csv_file"], cwe_id)
+        return is_in_category(external_mapping["cwe_top_25_2023"]["csv_file"], cwe_id)
 
     def is_owasp_top_ten_2021(self, cwe_id: Union[int, str]) -> bool:
         """Returns True if Weakness object in a Top OWASP Ten (2021) else False"""

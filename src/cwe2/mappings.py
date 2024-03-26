@@ -50,9 +50,9 @@ navigate_cwe: dict = {
 }
 
 external_mapping: dict = {
-    "cwe_top_25_2022": {
-        "csv_url": "https://cwe.mitre.org/data/csv/1387.csv.zip",
-        "csv_file": get_data_file_path("cwe2.database_v49.external_mappings", "1387.csv"),
+    "cwe_top_25_2023": {
+        "csv_url": "https://cwe.mitre.org/data/csv/1425.csv.zip",
+        "csv_file": get_data_file_path("cwe2.database_v49.external_mappings", "1425.csv"),
     },
     "most_important_hardware_weaknesses_2021": {
         "csv_url": "https://cwe.mitre.org/data/csv/1343.csv.zip",
@@ -82,6 +82,10 @@ external_mapping: dict = {
         "csv_url": "https://cwe.mitre.org/data/csv/1178.csv.zip",
         "csv_file": get_data_file_path("cwe2.database_v49.external_mappings", "1178.csv"),
     },
+    "addressed_by_ISA/IEC_62443_requirements": {
+        "csv_url": "https://cwe.mitre.org/data/csv/1424.csv.zip",
+        "csv_file": get_data_file_path("cwe2.database_v49.external_mappings", "1424.csv"),
+    },
     "cisq_quality_measures_2020": {
         "csv_url": "https://cwe.mitre.org/data/csv/1305.csv.zip",
         "csv_file": get_data_file_path("cwe2.database_v49.external_mappings", "1305.csv"),
@@ -108,6 +112,10 @@ helpful_view: dict = {
     "introduced_during_implementation": {
         "csv_url": "https://cwe.mitre.org/data/csv/702.csv.zip",
         "csv_file": get_data_file_path("cwe2.database_v49.helpful_views", "702.csv"),
+    },
+    "software_assurance_trends_categorization": {
+        "csv_url": "https://cwe.mitre.org/data/csv/1400.csv.zip",
+        "csv_file": get_data_file_path("cwe2.database_v49.helpful_views", "1400.csv"),
     },
     "quality_weaknesses_with_indirect_security_impacts": {
         "csv_url": "https://cwe.mitre.org/data/csv/1040.csv.zip",
@@ -168,6 +176,10 @@ helpful_view: dict = {
 }
 
 obsolete_views: dict = {
+    "cwe_top_25_2022": {
+        "csv_url": "https://cwe.mitre.org/data/csv/1387.csv.zip",
+        "csv_file": get_data_file_path("cwe2.database_v49.obsolete_views", "1387.csv"),
+    },
     "cwe_top_25_2021": {
         "csv_url": "https://cwe.mitre.org/data/csv/1337.csv.zip",
         "csv_file": get_data_file_path("cwe2.database_v49.obsolete_views", "1337.csv"),
@@ -234,4 +246,4 @@ obsolete_views: dict = {
     },
 }
 
-xml_database_path = get_data_file_path("cwe2.database_v49", "cwec_v4.9.xml")
+xml_database_path = get_data_file_path("cwe2.database_v49", "cwec_v4.14.xml")
