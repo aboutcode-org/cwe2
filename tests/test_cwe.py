@@ -39,7 +39,7 @@ class TestDatabase(TestCase):
             "ID:1000::NATURE:ChildOf:CWE ID:20:VIEW ID:700:ORDINAL:Primary::"
         )
 
-        assert cwe1.related_attack_patterns == "::13::146::176::203::270::271::69::76::77::"
+        assert cwe1.related_attack_patterns == "::13::146::176::203::270::271::579::69::76::77::"
 
         assert (
             cwe1.potential_mitigations == "::PHASE:Architecture and Design:STRATEGY:Separation of "
@@ -97,6 +97,7 @@ class TestDatabase(TestCase):
         assert self.db.is_cwe_top_25(20)
         assert self.db.is_cwe_top_25("20")
         assert not self.db.is_cwe_top_25(0)
+        assert not self.db.is_cwe_top_25(400)
         assert not self.db.is_cwe_top_25("0")
 
     def test_is_owasp_top_ten_2021(self):
