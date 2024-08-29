@@ -50,12 +50,9 @@ class InvalidCWEError(Exception):
 class Database:
     database_paths = (
         [navigate_cwe.get(key).get("csv_file") for key in navigate_cwe.keys()]
-        + [external_mapping.get(key).get("csv_file")
-           for key in external_mapping.keys()]
-        + [helpful_view.get(key).get("csv_file")
-           for key in helpful_view.keys()]
-        + [obsolete_views.get(key).get("csv_file")
-           for key in obsolete_views.keys()]
+        + [external_mapping.get(key).get("csv_file") for key in external_mapping.keys()]
+        + [helpful_view.get(key).get("csv_file") for key in helpful_view.keys()]
+        + [obsolete_views.get(key).get("csv_file") for key in obsolete_views.keys()]
     )
 
     cwe_files = {open(path, encoding="utf-8") for path in database_paths}
