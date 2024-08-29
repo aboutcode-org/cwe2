@@ -1,8 +1,8 @@
 #
 # Copyright (c) Julian-Nash, Ziad Hany, nexB. Inc. and others. All rights reserved.
 # SPDX-License-Identifier: MIT
-# See https://github.com/nexB/cwe2/blob/main/mit.LICENSE for the license text.
-# See https://github.com/nexB/cwe2 for support or download.
+# See https://github.com/aboutcode-org/cwe2/blob/main/mit.LICENSE for the license text.
+# See https://github.com/aboutcode-org/cwe2 for support or download.
 # See https://aboutcode.org for more information about nexB OSS projects.
 #
 
@@ -50,9 +50,12 @@ class InvalidCWEError(Exception):
 class Database:
     database_paths = (
         [navigate_cwe.get(key).get("csv_file") for key in navigate_cwe.keys()]
-        + [external_mapping.get(key).get("csv_file") for key in external_mapping.keys()]
-        + [helpful_view.get(key).get("csv_file") for key in helpful_view.keys()]
-        + [obsolete_views.get(key).get("csv_file") for key in obsolete_views.keys()]
+        + [external_mapping.get(key).get("csv_file")
+           for key in external_mapping.keys()]
+        + [helpful_view.get(key).get("csv_file")
+           for key in helpful_view.keys()]
+        + [obsolete_views.get(key).get("csv_file")
+           for key in obsolete_views.keys()]
     )
 
     cwe_files = {open(path, encoding="utf-8") for path in database_paths}

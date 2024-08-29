@@ -1,8 +1,8 @@
 #
 # Copyright (c) Julian-Nash, Ziad Hany, nexB. Inc. and others. All rights reserved.
 # SPDX-License-Identifier: MIT
-# See https://github.com/nexB/cwe2/blob/main/mit.LICENSE for the license text.
-# See https://github.com/nexB/cwe2 for support or download.
+# See https://github.com/aboutcode-org/cwe2/blob/main/mit.LICENSE for the license text.
+# See https://github.com/aboutcode-org/cwe2 for support or download.
 # See https://aboutcode.org for more information about nexB OSS projects.
 #
 import os
@@ -28,7 +28,8 @@ def get_data_file_path(package: str, resource: str) -> str:
     # Guard against non-existing files, or else importlib_resources.path
     # may raise a confusing TypeError.
     if not importlib_resources.is_resource(package, resource):
-        raise FileNotFoundError(f"Python package '{package}' resource '{resource}' not found.")
+        raise FileNotFoundError(
+            f"Python package '{package}' resource '{resource}' not found.")
 
     with importlib_resources.path(package, resource) as resource_path:
         return os.fspath(resource_path)

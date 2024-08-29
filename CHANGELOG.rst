@@ -21,5 +21,5 @@ v2.0.0
 - Update requirements.
 
 Initial release as a fork of https://github.com/Julian-Nash/cwe
-Adopt and merge skeleton from  https://github.com/nexB/skeleton
+Adopt and merge skeleton from  https://github.com/aboutcode-org/skeleton
 
